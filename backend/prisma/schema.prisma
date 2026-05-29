@@ -1,0 +1,174 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+    // output   = "../src/generated/prisma"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+// ENUMS
+enum FriendshipStatus {
+    pending
+    accepted
+}
+
+enum Language {
+    english
+    simplified_chinese
+    traditional_chinese
+}
+
+enum userStatus {
+    online
+    offline
+    ingame
+}
+
+enum TournamentStatus {
+    NOT_COMPLETE
+    COMPLETED
+}
+
+enum RoundType {
+    QF // Quarter Finals
+    SF // Semi Finals
+    F // Finals
+}
+
+// MODELS
+model User {
+    id               Int        @id @default(autoincrement())
+    username         String     @unique
+    password         String?
+    email            String     @unique
+    googleId         String?    @unique @map("google_id")
+    avatarUrl        String     @default("/assets/yellow-ghost.png") @map("avatar_url")
+    status           userStatus @default(offline) @map("status")
+    joinedAt         DateTime   @default(now()) @map("joined_at")
+    updatedAt        DateTime   @default(now()) @map("updated_at")
+    twoFactorSecret  String?    @map("two_factor_secret")
+    twoFactorEnabled Boolean    @default(false) @map("two_factor_enabled")
+
+    // Relations
+    settings UserSettings?
+
+    sentFriendships     Friendship[] @relation("FriendshipRequester")
+    receivedFriendships Friendship[] @relation("FriendshipAccepter")
+
+    blockedUsers BlockedFriendship[] @relation("Blocks") // people I blocked
+    blockedBy    BlockedFriendship[] @relation("BlockedBy") // people who blocked me
+
+    friendChatMessages FriendChatMessage[]
+
+    tournamentPlayers TournamentPlayer[]
+
+    @@map("users")
+}
+
+model UserSettings {
+    userId   Int      @id @map("user_id")
+    language Language @default(english)
+
+    // Relation
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@map("user_settings")
+}
+
+model Friendship {
+    id          Int              @id @default(autoincrement())
+    requesterId Int              @map("user_id")
+    accepterId  Int              @map("friend_id")
+    status      FriendshipStatus @default(pending)
+    createdAt   DateTime         @default(now()) @map("created_at")
+    updatedAt   DateTime         @default(now()) @map("updated_at")
+
+    // Relations
+    requester User @relation("FriendshipRequester", fields: [requesterId], references: [id], onDelete: Cascade)
+    accepter  User @relation("FriendshipAccepter", fields: [accepterId], references: [id], onDelete: Cascade)
+
+    chatMessages FriendChatMessage[]
+
+    @@unique([requesterId, accepterId], name: "uq_friendship")
+    @@index([requesterId], name: "idx_friendships_requester")
+    @@index([accepterId], name: "idx_friendships_accepter")
+    @@map("friendships")
+}
+
+model BlockedFriendship {
+    id        Int      @id @default(autoincrement())
+    blockerId Int      @map("blocker_id")
+    blockedId Int      @map("blocked_id")
+    createdAt DateTime @default(now()) @map("created_at")
+
+    blocker User @relation("Blocks", fields: [blockerId], references: [id], onDelete: Cascade)
+    blocked User @relation("BlockedBy", fields: [blockedId], references: [id], onDelete: Cascade)
+
+    @@unique([blockerId, blockedId], name: "uq_blocked_friendship")
+    @@map("blocked_friendship")
+}
+
+model FriendChatMessage {
+    id           Int      @id @default(autoincrement())
+    friendshipId Int
+    senderId     Int
+    message      String
+    timestamp    DateTime @default(now())
+
+    friendship Friendship @relation(fields: [friendshipId], references: [id], onDelete: Cascade)
+    sender     User       @relation(fields: [senderId], references: [id], onDelete: Cascade)
+
+    @@index([friendshipId], name: "idx_friend_chat_messages_friendship")
+    @@map("friend_chat_messages")
+}
+
+model Tournament {
+    id        Int              @id @default(autoincrement())
+    status    TournamentStatus @default(NOT_COMPLETE)
+    createdAt DateTime         @default(now()) @map("created_at")
+
+    players TournamentPlayer[]
+    matches TournamentMatch[]
+
+    @@map("tournaments")
+}
+
+model TournamentPlayer {
+    id           Int  @id @default(autoincrement())
+    tournamentId Int  @map("tournament_id")
+    userId       Int  @map("user_id")
+    ranking      Int? @default(0)
+
+    tournament      Tournament        @relation(fields: [tournamentId], references: [id], onDelete: Cascade)
+    user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+    matchesAsP1     TournamentMatch[] @relation("Player1")
+    matchesAsP2     TournamentMatch[] @relation("Player2")
+    matchesAsWinner TournamentMatch[] @relation("Winner")
+
+    @@unique([tournamentId, userId]) // prevent duplicate player entries per tournament
+    @@map("tournament_players")
+}
+
+model TournamentMatch {
+    id           Int       @id @default(autoincrement())
+    tournamentId Int       @map("tournament_id")
+    round        RoundType
+    player1Id    Int       @map("player1_id")
+    player2Id    Int       @map("player2_id")
+    winnerId     Int?      @map("winner_id")
+    player1Score Int?      @default(0)
+    player2Score Int?      @default(0)
+    createdAt    DateTime  @default(now())
+
+    tournament Tournament        @relation(fields: [tournamentId], references: [id], onDelete: Cascade)
+    player1    TournamentPlayer  @relation("Player1", fields: [player1Id], references: [id], onDelete: Cascade)
+    player2    TournamentPlayer  @relation("Player2", fields: [player2Id], references: [id], onDelete: Cascade)
+    winner     TournamentPlayer? @relation("Winner", fields: [winnerId], references: [id], onDelete: Cascade)
+
+    @@map("tournament_matches")
+}
