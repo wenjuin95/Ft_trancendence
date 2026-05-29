@@ -1,19 +1,16 @@
 # ft_transcendence 🏓
 
-A group project that build a full-stack multiplayer Pong game web application built as part of the 42 School curriculum.
+A full-stack, multiplayer Pong web application developed collaboratively by a team of 5 at 42 School.
 
 ---
 
 ## 📸 Screenshots
 
-### Title Screen
-![Title Screen](public/title.png)
+### Game Previews
 
-### Lobby
-![Lobby](public/lobby.png)
-
-### Game
-![Game](public/game.png)
+| Title Screen | Lobby | Game |
+| :---: | :---: | :---: |
+| <img src="public/title.png" width="100%"> | <img src="public/lobby.png" width="100%"> | <img src="public/game.png" width="100%"> |
 
 ---
 
