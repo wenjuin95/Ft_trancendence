@@ -1,0 +1,403 @@
+{
+  "AdvanceView": {
+    "advancement": "Advancement",
+    "congratulations": "Congratulations!",
+    "next_round": "You have advanced to the next round!",
+    "continue": "Continue"
+  },
+  "CustomModeView": {
+    "choose_action": "CHOOSE AN ACTION",
+    "play_locally": "PLAY LOCALLY",
+    "create_room": "CREATE ROOM",
+    "join_room": "JOIN ROOM",
+    "back": "BACK",
+    "choose_type": "CHOOSE GAME TYPE",
+    "singles": "SINGLES",
+    "doubles": "DOUBLES",
+    "choose_join": "CHOOSE HOW TO JOIN",
+    "quick_join": "QUICK JOIN",
+    "join_private": "JOIN PRIVATE ROOM",
+    "enter_room_id": "Enter room ID",
+    "create_local_game": "Create a local game?",
+    "create_singles_game": "Create a singles game?",
+    "create_doubles_game": "Create a doubles game?",
+    "join_singles_game": "Join a singles game?",
+    "join_doubles_game": "Join a doubles game?",
+    "room_not_found": "Room not found",
+    "room_is_full": "Room is full",
+    "offline_error": "You are offline. Please check your connection.",
+    "close": "close"
+  },
+  "DoublesRoomView": {
+    "doubles_room": "Doubles Room",
+    "room_id": "Room ID",
+    "ready": "Ready",
+    "unready": "Unready",
+    "start": "Start",
+    "game_start": "Game Start!",
+    "leave_room": "Leave Room",
+    "leave_confirmation": "Are you sure you want to leave the room?",
+    "room_is_full": "Room is full",
+    "room_not_found": "Room not found",
+    "unknown_error": "Unknown error",
+    "offline_error": "You are offline. Please check your connection.",
+    "close": "close",
+    "private": "Private",
+    "public": "Public",
+    "copied": "Room ID copied to clipboard!"
+  },
+  "LocalGameView": {
+    "change_sprite": "Change Sprite",
+    "local_game": "Local Game",
+    "game_settings": "Game Settings",
+    "start": "Start",
+    "back_to_lobby": "Back to lobby",
+    "player1": "Player 1",
+    "player2": "Player 2",
+    "end_tournament": "End Tournament",
+    "next_round": "Next Round",
+    "vs": "vs",
+    "tournament_over": "Tournament Over",
+    "winner": "Winner",
+    "final_rankings": "Final Rankings"
+  },
+  "LocalTournamentView": {
+    "please_fill_out_all_player_names_and_select_a_skin_for_each": "Please fill out all player names and select a skin for each.",
+    "player_names_must_be_unique": "Player names must be unique.",
+    "map": "Map",
+    "stadium": "🏟️ Stadium",
+    "mansion": "🏰 Mansion",
+    "arcade": "🎮 Arcade",
+    "skin": "Skin",
+    "name": "Name",
+    "yellow": "🟡 Yellow",
+    "green": "🟢 Green",
+    "blue": "🔵 Blue",
+    "red": "🔴 Red",
+    "purple": "🟣 Purple",
+    "starry": "🌟 Starry",
+    "white": "⚪ White",
+    "forty_two": "42",
+    "player": "Player",
+    "start": "Start",
+    "tournament_matchups": "Tournament Matchups",
+    "vs": "vs"
+  },
+  "GameView": {
+    "offline_error": "You are offline. Please check your connection.",
+    "close": "close"
+  },
+  "LoginView": {
+    "username_or_email_required": "Username or email is required",
+    "password_required": "Password is required",
+    "invalid_credentials": "Username, email or password is incorrect",
+    "login_failed": "Login failed",
+    "username_or_email": "Username / Email",
+    "password": "Password",
+    "login": "LOGIN",
+    "loading": "Loading...",
+    "continue_with_google": "CONTINUE WITH GOOGLE",
+    "google_login_failed": "Google login failed",
+    "signup_prompt": "Don’t have an account? Sign up",
+    "2fa": "Two-Factor Authentication",
+    "enter_code": "Enter the 6-digit code from your authenticator app.",
+    "verify_code": "Verify Code",
+    "invalid_code_error": "Invalid code or server error",
+    "user_already_logged_in": "User is already logged in from another device"
+  },
+  "MainMenuView": {
+    "tournament_mode": "TOURNAMENT MODE",
+    "custom_mode": "CUSTOM MODE",
+    "settings": "SETTINGS",
+    "join_tournament": "Join a tournament?",
+    "local_tournament": "LOCAL TOURNAMENT"
+  },
+  "MatchView": {
+    "loading": "Loading...",
+    "ready": "Ready",
+    "unready": "Unready",
+    "pending": "Pending",
+    "quarterfinals": "Quarterfinals",
+    "semifinals": "Semifinals",
+    "finals": "Finals"
+  },
+  "ResultsView": {
+    "results": "Results",
+    "leave": "Leave",
+    "medal_message1": "Congratulations!",
+    "medal_message2_gold": "You won gold!",
+    "medal_message2_silver": "You won silver!",
+    "medal_message2_bronze": "You won bronze!",
+    "participation_message1": "Thank you for participating!",
+    "participation_message2": "You placed {{position}}th overall."
+  },
+  "SignUpSuccessView": {
+    "success_message": "Your account has been successfully created!",
+    "login": "LOGIN"
+  },
+  "SignUpView": {
+    "username_required": "Username is required",
+    "email_required": "Email is required",
+    "password_required": "Password is required",
+    "password_mismatch": "Passwords do not match",
+    "username_invalid": "Username can only contain letters, numbers, underscore, and hyphen",
+    "username_too_short": "Username must be at least 2 characters long",
+    "username_too_long": "Username must be at most 15 characters long",
+    "username_already_exists": "User with this username already exists",
+    "email_invalid": "Please enter a valid email address",
+    "email_already_exists": "User with this email already exists",
+    "password_too_weak": "Password must contain uppercase, lowercase, and numbers",
+    "password_too_short": "Password must be at least 8 characters long",
+    "password_too_long": "Password is too long",
+    "registration_failed": "Registration failed",
+    "username": "Username",
+    "username_available": "Username is available",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm password",
+    "creating_account": "Creating account...",
+    "signup": "SIGN UP"
+  },
+  "SinglesRoomView": {
+    "singles_room": "Singles Room",
+    "room_id": "Room ID",
+    "ready": "Ready",
+    "unready": "Unready",
+    "start": "Start",
+    "game_start": "Game Start!",
+    "leave_room": "Leave Room",
+    "leave_confirmation": "Are you sure you want to leave the room?",
+    "room_is_full": "Room is full",
+    "unknown_error": "Unknown error",
+    "offline_error": "You are offline. Please check your connection.",
+    "close": "close",
+    "private": "Private",
+    "public": "Public",
+    "copied": "Room ID copied to clipboard!"
+  },
+  "TournamentLobbyView": {
+    "quarterfinals": "Quarterfinals",
+    "semifinals": "Semifinals",
+    "finals": "Finals",
+    "tournament_lobby": "Tournament Lobby",
+    "ready": "Ready",
+    "unready": "Unready",
+    "quit": "Quit",
+    "quit_confirmation": "Are you sure you want to quit the tournament?",
+    "room_is_full": "Room is full",
+    "offline_error": "You are offline. Please check your connection.",
+    "close": "close"
+  },
+  "BasicInfoPopup": {
+    "username_invalid": "Username can only contain letters, numbers, underscore, and hyphen",
+    "username_too_short": "Username must be at least 2 characters long",
+    "username_too_long": "Username must be at most 15 characters long",
+    "username_conflict": "Username already exists",
+    "save_failed": "Failed to save changes",
+    "header": "Basic Info",
+    "joined": "Joined",
+    "change_avatar": "Change Avatar",
+    "username": "Username",
+    "email": "Email",
+    "save_changes": "Save Changes",
+    "cancel": "Cancel",
+    "invalid_file_type_error": "Only JPG and PNG images are allowed.",
+    "file_too_large_error": "File too large! Max size is 2MB."
+  },
+  "ConfirmationPopup": {
+    "yes": "YES",
+    "no": "NO"
+  },
+  "FriendsPopup": {
+    "tabs": {
+      "friends": "Friends",
+      "requests": "Requests",
+      "blocked": "Blocked"
+    },
+    "add_friend": "Add Friend",
+    "search_friend": "Search friend",
+    "enter_friend_username": "Enter friend's username",
+    "friend_added": "Friend has been added",
+    "back": "Back",
+    "no_friends_yet": "No friends yet",
+    "no_new_requests": "No new requests",
+    "no_blocked_users": "No blocked users",
+    "no_messages_yet": "No messages yet",
+    "enter_valid_username": "Please enter a valid username",
+    "user_not_found": "User not found",
+    "friend_request_pending": "Friend request is pending",
+    "already_friends": "Users are already friends",
+    "friendship_conflict": "Friendship already exists",
+    "cannot_friend_self": "User cannot friend themselves",
+    "add_friend_failed": "Failed to add friend"
+  },
+  "GameSettingsPopup": {
+    "header": "Game Settings",
+    "ball_speed": "Ball Speed",
+    "ball_size": "Ball Size",
+    "paddle_speed": "Paddle Speed",
+    "choose_map": "Choose A Map",
+    "restore_default": "Restore Default",
+    "save_changes": "Save Changes",
+    "slow": "Slow",
+    "normal": "Normal",
+    "fast": "Fast",
+    "small": "Small",
+    "big": "Big"
+  },
+  "HowToPlayPopup": {
+    "header": "How to Play",
+    "objective_title": "Objective",
+    "objective_text": [
+      "The goal is simple - hit the ball past your opponent’s paddle to score a point. Each match begins with a serve. Use your paddle to deflect the ball and outmaneuver your opponent. First player to reach three points wins the match."
+    ],
+    "controls_title": "Controls",
+    "controls_text": [
+      "Use the up and down arrow keys to move your paddle. In Local Mode, player 1 uses the W / S keys and player 2 uses the up / down arrow keys."
+    ],
+    "tournament_title": "Tournament Mode",
+    "tournament_text": [
+      "Compete in a structured bracket of singles matches that progresses through quarterfinals, semifinals, and finals.",
+      "Winners will advance to the next round while losing players in each bracket will be ranked based on the duration of their matches. Faster losses will result in lower rankings.",
+      "Player ranking and match history are tracked for all tournament games."
+    ],
+    "custom_title": "Custom Mode",
+    "custom_text": [
+      "Enjoy casual play with full customization options. Create or join rooms for both singles and doubles matches. Play with friends or get matched with random players.",
+      "Note: Local Mode supports singles matches only."
+    ]
+  },
+  "ProfilePopup": {
+    "loading": "Loading...",
+    "header": "My Profile",
+    "header_other": "Profile",
+    "add_friend": "Add Friend",
+    "friend": "Friend",
+    "request_sent": "Request Sent",
+    "blocked": "Blocked"
+  },
+  "SettingsPopup": {
+    "header": "Settings",
+    "language": "Language",
+    "english": "English",
+    "simplified_chinese": "简体中文",
+    "traditional_chinese": "繁體中文"
+  },
+  "TournamentStatsPopup": {
+    "loading": "Loading...",
+    "header": "Tournament Statistics",
+    "summary": "Summary",
+    "medals": {
+      "gold": "Gold",
+      "silver": "Silver",
+      "bronze": "Bronze"
+    },
+    "tournaments_played": "Tournaments Played",
+    "average_ranking": "Average Ranking",
+    "history": "History",
+    "no": "No",
+    "date": "Date",
+    "ranking": "Ranking",
+    "match": "Match",
+    "opponent": "Opponent",
+    "score": "Score",
+    "result": "Result",
+    "quarterfinals": "Quarterfinals",
+    "semifinals": "Semifinals",
+    "finals": "Finals",
+    "won": "Won",
+    "lost": "Lost",
+    "no_history_yet": "No tournament history yet"
+  },
+  "TwoFAPopup": {
+    "loading": "Loading...",
+    "header": "2FA Settings",
+    "2fa_not_enabled_message": "Two-Factor Authentication (2FA) is not enabled yet.",
+    "enable_2fa": "Enable 2FA",
+    "authenticator_instructions": "Set up your authenticator, then enter the 6-digit code below.",
+    "verify_code": "Verify Code",
+    "2fa_enabled_message": "Two-Factor Authentication (2FA) is enabled.",
+    "disable_2fa": "Disable 2FA",
+    "invalid_code_error": "Invalid code or server error",
+    "verification_failed": "Verification failed"
+  },
+  "ApiState": {
+    "loading": "Loading...",
+    "something_went_wrong": "Something went wrong",
+    "try_again": "Try Again",
+    "not_found": "Record not found"
+  },
+  "CascadeCard": {
+    "confirm_block": "Are you sure you want to block {{username}}?",
+    "confirm_unblock": "Are you sure you want to unblock {{username}}?",
+    "blocked": "{{username}} has been blocked.",
+    "unblocked": "{{username}} has been unblocked.",
+    "yes": "Yes",
+    "no": "No",
+    "back_to_chat": "Back to Chat",
+    "block": "Block",
+    "unblock": "Unblock"
+  },
+  "ChooseSpriteContents": {
+    "choose_sprite": "Choose a sprite",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "CustomToast": {
+    "message_from": "New message from {{username}}"
+  },
+  "LiveChat": {
+    "live_chat": "Live Chat",
+    "send": "Send"
+  },
+  "MapSelector": {
+    "stadium": "Stadium",
+    "mansion": "Mansion",
+    "arcade": "Arcade"
+  },
+  "Medals": {
+    "gold": "Gold",
+    "silver": "Silver",
+    "bronze": "Bronze"
+  },
+  "Messaging": {
+    "loading": "Loading...",
+    "online": "Online",
+    "offline": "Offline",
+    "type_message": "Type a message",
+    "send": "Send",
+    "no_messages_yet": "No messages yet"
+  },
+  "ProfileContents": {
+    "loading": "Loading...",
+    "joined": "Joined",
+    "tournaments_played": "Tournaments Played",
+    "average_ranking": "Average Ranking"
+  },
+  "ProfileDropdown": {
+    "loading": "Loading...",
+    "my_profile": "MY PROFILE",
+    "basic_info": "BASIC INFO",
+    "2fa_settings": "2FA SETTINGS",
+    "tournament_stats": "TOURNAMENT STATS",
+    "friends": "FRIENDS",
+    "how_to_play": "HOW TO PLAY",
+    "log_out": "LOG OUT"
+  },
+  "ReadyPlayers": {
+    "ready": "Ready",
+    "pending": "Pending"
+  },
+  "ReadyRoomPlayers": {
+    "leader": "Leader",
+    "waiting": "Waiting For Player",
+    "left_team": "Left Team",
+    "right_team": "Right Team",
+    "switch_teams": "Switch Teams"
+  },
+  "RoomLayout": {
+    "game_settings": "Game Settings",
+    "friends": "Friends",
+    "choose_sprite": "Choose Sprite"
+  }
+}

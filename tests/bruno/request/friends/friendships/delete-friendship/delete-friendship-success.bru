@@ -1,0 +1,24 @@
+meta {
+  name: delete-friendship-success
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{baseUrl}}/friendships/1/10
+  body: none
+  auth: inherit
+}
+
+assert {
+  res.status: eq 200
+  res.body.success: eq true
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  - requesterId = amount of friendships seeded + 1
+}

@@ -1,0 +1,38 @@
+meta {
+  name: email-exists
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "duplicate-test@example.com",
+    "username": "sec_user_test",
+    "password": "Test123!"
+  }
+}
+
+tests {
+  test("should return 409 status for duplicate email", function() {
+    expect(res.status).to.equal(409);
+    expect(res.body.success).to.be.false;
+  });
+  
+  test("should return proper error response", function() {
+    expect(res.body.error).to.be.a('string');
+    expect(res.body.errorCode).to.equal('EMAIL_ALREADY_EXISTS');
+    expect(res.body).to.not.have.property('data');
+  });
+  
+  test("should follow ApiResponse error pattern", function() {
+    expect(res.body).to.have.property('success', false);
+    expect(res.body).to.have.property('error');
+    expect(res.body).to.have.property('errorCode');
+  });
+}

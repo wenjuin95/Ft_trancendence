@@ -1,0 +1,30 @@
+meta {
+  name: patch-user-success
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{baseUrl}}/users/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "updatedName"
+  }
+}
+
+assert {
+  res.status: eq 200
+  res.body.success: eq true
+  res.body.data.id: isNumber
+  res.body.data.username: eq "updatedName"
+  res.body.data.joinedAt: isString
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

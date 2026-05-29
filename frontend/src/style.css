@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-card-blue: #081334;
+  --color-input-gray: #1f2b4f;
+  --color-brown: #5a4a24;
+  --color-grass-green: #8ac639;
+  --color-grass-light-green: #9fd044;
+
+  --color-gold: #fdd602;
+  --color-silver: #8ebac5;
+  --color-bronze: #ea9b58;
+}
+
+.icon-btn {
+  @apply cursor-pointer hover:scale-110 transition-all duration-200 active:scale-95;
+}
+
+/* hide scrollbar */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* ROW */
+/* flex items-center justify-center */
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* flex items-center justify-center */
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* flex items-center justify-around */
+.flex-row-around {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* flex flex-col items-start justify-start */
+.flex-row-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* COLUMN */
+/* flex flex-col items-center justify-center */
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* flex flex-col items-center justify-between */
+.flex-col-between {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* flex flex-col items-center justify-around */
+.flex-col-around {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* flex flex-col items-start justify-start */
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
